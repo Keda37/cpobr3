@@ -53,7 +53,6 @@ function checkRequired($form, show_all_errors, $current_item) {
 	var $submit_button = $form.find('.submit-request-button');
 	$submit_button.toggleClass('disabled', !result);
 	$submit_button.prop('disabled', !result);
-
 	return result;
 }
 
@@ -97,6 +96,7 @@ $(function () {
 					setTimeout(function () {
 						$('.modal').addClass('in');
 					}, 100);
+					$('.submit-request-button').val('Ваша заявка отправлена');
 
 					if ($form.data('aggregatable') && window.aggregate && typeof window.aggregate === 'function') {
 						aggregate($form);
@@ -128,12 +128,5 @@ $(function () {
 		setTimeout(function () {
 			$('.modal').removeClass('active');
 		}, 250)
-	});
-
-	$('.modal-close').click(function() {
-		$('.modal').addClass('active');
-		setTimeout(function () {
-			$('.modal').addClass('in');
-		}, 100);
 	});
 });
