@@ -183,7 +183,7 @@ body {
 }
 
 .first__text {
-    padding-left: 75px
+    padding-left: 70px
 }
 
 .first__title {
@@ -267,12 +267,30 @@ body {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     margin-top: 4px;
-    position: relative
+    position: relative;   
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.speaker__photo:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -7px;
+    width: 299px;
+    height: 300px;
+    background-color: white;
+    border-radius: 100%
 }
 
 .speaker__photo img {
     display: block;
-    position: relative
+    position: relative;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
 }
 
 .speaker__text {
@@ -780,7 +798,7 @@ body {
 }
 
 .gift__text {
-    padding-left: 86px
+    padding-left: 70px
 }
 
 .gift__text-subtitle {
@@ -810,13 +828,11 @@ body {
 }
 
 .gift__text-name {
-    color: black;
     font-size: 24px;
     font-weight: 700;
     margin-top: 5px;
-    text-indent: -9999px;
-    background: url(../img/koptenko.png) left center no-repeat;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    color: #2f8e79;
 }
 
 .gift__text-button {
